@@ -44,7 +44,6 @@ const { title } = Astro.props;
   @font-face {
     font-family: 'Vindigater';
     src: url('/fonts/Vindigater.woff2') format('woff2');
-
     font-display: swap;
     font-style: normal;
   }
@@ -57,5 +56,6 @@ const { title } = Astro.props;
   }
   body {
     background-color: var(--bg-color);
+    @apply font-main;
   }
 </style>
