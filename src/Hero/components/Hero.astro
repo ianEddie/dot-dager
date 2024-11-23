@@ -1,0 +1,51 @@
+---
+import ArrowUpIcon from '@hero/icons/arrow-up-icon.astro';
+import HeroPicture from './HeroPicture.astro';
+import About from './About.astro';
+import Youtube from './Youtube.astro';
+---
+
+<main class='h-screen w-full flex flex-col z-10 p-4 gap-3'>
+  <section class='h-1/2 grid grid-cols-[1fr_5%] gap-3'>
+    <article class='flex gap-5'>
+      <div
+        class='bg-accent flex justify-around items-center gap-20 flex-grow px-10 rounded-3xl'
+      >
+        <h1
+          class='flex flex-col font-title text-[7.5rem] relative bg-blue-300 w-1/2 h-1/2'
+        >
+          <span class='absolute -top-16 left-24'>Dot</span>
+          <span class='absolute -bottom-16 right-0'>Dager</span>
+        </h1>
+        <HeroPicture />
+      </div>
+    </article>
+    <aside class='bg-secondary'>
+      <a
+        href=''
+        class='h-full w-full py-5 flex flex-col items-center gap-y-5'
+      >
+        <ArrowUpIcon />
+        <p class='text-pretty rotated-text text-center text-[18px] font-medium'>
+          Unite a la comunidad
+        </p>
+      </a>
+    </aside>
+  </section>
+  <section class='flex-grow grid grid-cols-[40%_1fr] grid-rows-[60%_1fr] gap-3'>
+    <About />
+    <Youtube />
+    <article class='bg-primary row-span-1'>2</article>
+  </section>
+</main>
+<style>
+  .rotated-text {
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+  }
+  article,
+  aside {
+    @apply rounded-2xl;
+  }
+</style>
